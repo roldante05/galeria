@@ -24,8 +24,25 @@
   color: white;
 }
 
+.carta {
+  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 1s;
+}
+
+.carta:hover {
+  transform: scale(1.2);
+  z-index: 1.20;
+}
+
 .App-link {
   color: #61dafb;
+}
+
+.texto{
+  font-weight: 700 !important;
+  background-color: #1c1d1f96;
+  padding: 20px 10px;
 }
 
 @keyframes App-logo-spin {

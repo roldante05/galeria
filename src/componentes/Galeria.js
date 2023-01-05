@@ -1,24 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Fotos from "./Fotos";
+import Databases from "../db.json";
 const Galeria = () => {
-  const URL = "  http://localhost:5000/imagenes";
-  const [users, setUsers] = useState([]);
-
-  useEffect(() => {
-    showInfo();
-  }, []);
-
-  const showInfo = async () => {
-    const response = await fetch(URL);
-    const data = await response.json();
-    setUsers(data);
-  };
 
   return (
     <div className="row">
-      {users.map((item) => (
-        <Fotos id={item.id} img={item.url} />
-      ))}
+      {
+        Databases.map((database) => {
+         return (
+          <Fotos id={database.id} img={database.url} title={database.title} />
+         )
+        })
+      }
+
     </div>
   );
 };

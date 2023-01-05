@@ -1,4 +1,5 @@
 import React from "react";
+import '../App.css'
 
 const Fotos = (props) => {
   return (
@@ -12,7 +13,7 @@ const Fotos = (props) => {
         >
           <img
             src={props.img}
-            className="card-img-top my-2 rounded"
+            className="carta card-img-top my-2 rounded"
             alt="..."
             height="368px"
           />
@@ -34,6 +35,7 @@ const Fotos = (props) => {
         </div>
         <div className="modal-dialog">
           <img src={props.img} className="card-img-top rounded" alt="..." />
+          <p className="text-white  texto " > {props.title} </p>
         </div>
       </div>
     </>
